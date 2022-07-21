@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,8 +16,17 @@ body {
 }
 
 .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* ============================== SEARCH BLOCK ============================== */
+
+.search-block {
   border-radius: 5px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   width: 300px;
 }
@@ -29,7 +38,7 @@ body {
 .subtitle {
   display: inline-block;
   margin: 5px 0 20px;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .header {
@@ -39,7 +48,7 @@ body {
 }
 
 .header input {
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, 0.3);
   border: 0;
   border-radius: 50px;
   color: #fff;
@@ -77,7 +86,7 @@ body {
 
 .user-list img {
   height: 50px;
-  aspect-ratio: 1 / 1;
+  width: 50px;
   object-fit: cover;
   border-radius: 50%;
 }
@@ -92,4 +101,100 @@ body {
 
 .user-list .user-info p {
   font-size: 12px;
+}
+
+/* ============================== PLACEHOLDER BLOCK ============================== */
+
+img {
+  max-width: 100%;
+}
+
+.animated-bg {
+  background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 10%, #f6f7f8 20%, #f6f7f8 100%);
+  background-size: 200% 100%;
+  animation: bgPos 1s linear infinite;
+}
+
+@keyframes bgPos {
+  0% {
+    background-position: 50% 0;
+  }
+
+  100% {
+    background-position: -150% 0;
+  }
+}
+
+.animated-bg-text {
+  border-radius: 50px;
+  display: inline-block;
+  margin: 0;
+  height: 10px;
+  width: 100%;
+}
+
+.span-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.placeholder-block {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 350px;
+}
+
+.card-header {
+  height: 200px;
+}
+
+.card-header img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.card-content {
+  background-color: #fff;
+  padding: 30px;
+}
+
+.card-title {
+  height: 20px;
+  margin: 0;
+}
+
+.card-excerpt {
+  color: #777;
+  margin: 10px 0 20px;
+}
+
+.card-excerpt span:not(:last-of-type) {
+  margin-bottom: 5px;
+}
+
+.card-author {
+  display: flex;
+}
+
+.card-profile-img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 10px;
+  width: 100px;
+}
+
+.author-info small {
+  color: #aaa;
+  margin-top: 5px;
 }
